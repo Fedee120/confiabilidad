@@ -9,20 +9,20 @@ MonteCarloSimulator::MonteCarloSimulator(const Graph& graph, int num_samples, in
     connectivity_count.resize(num_threads, 0);
 }
 
-void MonteCarloSimulator::perform_simulation(int thread_id) {
-    Graph sampled_graph = original_graph.sample_graph();
+void MonteCarloSimulator::perform_simulation(int thread_id, std::mt19937& rng) {
+    Graph sampled_graph = original_graph.sample_graph(rng);
     if (sampled_graph.is_connected()) {
         connectivity_count[thread_id]++;
     }
 }
 
-void MonteCarloSimulator::simulate(int thread_id) {
+void MonteCarloSimulator::simulate(int thread_id, std::mt19937& rng) {
     while (true) {
         int current_sample = samples_processed++;
         if (current_sample >= num_samples) {
             break;
         }
-        perform_simulation(thread_id);
+        perform_simulation(thread_id, rng);
     }
 }
 

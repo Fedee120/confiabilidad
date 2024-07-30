@@ -1,8 +1,7 @@
 #include "ThreadManager.hpp"
 #include <iostream>
 #include <chrono>
-#include <cmath>
-#include <algorithm>  // Para std::max y std::min
+#include <random>
 
 ThreadManager::ThreadManager(MonteCarloSimulator& simulator, int num_threads)
     : simulator(simulator), num_threads(num_threads), work_remaining(num_threads), global_processed_count(0) {
@@ -31,7 +30,14 @@ void ThreadManager::join_all() {
     }
 }
 
+std::mt19937 ThreadManager::initialize_rng(int seed) {
+    std::random_device rd;
+    return std::mt19937(seed + rd());
+}
+
 void ThreadManager::thread_work(int thread_id) {
+    std::mt19937 rng = initialize_rng(thread_id);
+
     while (true) {
         int local_work = 0;
         {
@@ -57,7 +63,7 @@ void ThreadManager::thread_work(int thread_id) {
         }
 
         for (int i = 0; i < local_work; ++i) {
-            simulator.perform_simulation(thread_id);
+            simulator.perform_simulation(thread_id, rng);
 
             {
                 std::lock_guard<std::mutex> guard(work_mutex);

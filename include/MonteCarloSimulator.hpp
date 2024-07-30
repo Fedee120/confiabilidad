@@ -7,19 +7,20 @@
 #include <thread>
 #include <mutex>
 #include <tuple>
+#include <random>
 
 class MonteCarloSimulator {
 public:
     MonteCarloSimulator(const Graph& graph, int num_samples, int num_threads);
 
     // Método que realiza la simulación para un hilo específico
-    void simulate(int thread_id);
+    void simulate(int thread_id, std::mt19937& rng);
 
     // Método que calcula la confiabilidad de la red después de las simulaciones
     double calculate_reliability() const;
 
     // Método auxiliar para realizar una única simulación
-    void perform_simulation(int thread_id);
+    void perform_simulation(int thread_id, std::mt19937& rng);
 
     // Método para obtener el número de muestras
     int get_num_samples() const { return num_samples; }
