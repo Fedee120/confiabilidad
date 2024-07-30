@@ -49,7 +49,8 @@ Graph Graph::sample_graph(std::mt19937& rng) const {
 
     std::uniform_real_distribution<> dis(0.0, 1.0);
 
-    for (auto& [node, neighbors] : sampled_graph.adjacency_list) {
+    for (auto& node_neighbors : sampled_graph.adjacency_list) {
+        auto& neighbors = node_neighbors.second;
         for (auto it = neighbors.begin(); it != neighbors.end();) {
             if (dis(rng) < it->second) {  // Arista falla y se elimina
                 it = neighbors.erase(it);
@@ -57,11 +58,6 @@ Graph Graph::sample_graph(std::mt19937& rng) const {
                 ++it;
             }
         }
-    }
-
-    int edge_count = 0;
-    for (const auto& [node, neighbors] : sampled_graph.adjacency_list) {
-        edge_count += neighbors.size();
     }
 
     return sampled_graph;
