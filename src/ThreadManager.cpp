@@ -69,11 +69,11 @@ void ThreadManager::thread_work(int thread_id) {
                 std::lock_guard<std::mutex> guard(work_mutex);
                 global_processed_count++;
                 if (global_processed_count % 10000 == 0) {
-                    std::cout << "Total processed samples: " << global_processed_count << ". Remaining work: ";
+                    //std::cout << "Total processed samples: " << global_processed_count << ". Remaining work: ";
                     for (int j = 0; j < num_threads; ++j) {
-                        std::cout << "Thread " << j << ": " << work_remaining[j] << " ";
+                        //std::cout << "Thread " << j << ": " << work_remaining[j] << " ";
                     }
-                    std::cout << std::endl;
+                    //std::cout << std::endl;
                 }
             }
         }
