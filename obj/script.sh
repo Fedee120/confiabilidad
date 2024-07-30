@@ -3,7 +3,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=32
 #SBATCH --mem=2048
-#SBATCH --time=00:02:00
+#SBATCH --time=20:00:00
 #SBATCH --tmp=9G
 #SBATCH --partition=normal
 #SBATCH --qos=normal

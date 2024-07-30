@@ -1,0 +1,247 @@
+/var/spool/slurm/d/job3894004/slurm_script: line 15: cd: /clusteruy/home/gpgpu10/confiablidad/obj: No such file or directory
+----------------------------
+Arguments: 
+ - CSV file: ./118-nodes.csv
+ - Number of samples: 372221
+ - Number of threads: 1
+ - Number of experiments: 10
+----------------------------
+ - Graph loaded successfully!
+ - Number of nodes: 118
+ - Number of edges: 125
+Experiment 1 - Calculated reliability: 0.596224
+Experiment 2 - Calculated reliability: 0.596329
+Experiment 3 - Calculated reliability: 0.595375
+Experiment 4 - Calculated reliability: 0.593862
+Experiment 5 - Calculated reliability: 0.596498
+Experiment 6 - Calculated reliability: 0.596175
+Experiment 7 - Calculated reliability: 0.598233
+Experiment 8 - Calculated reliability: 0.596791
+Experiment 9 - Calculated reliability: 0.595982
+Experiment 10 - Calculated reliability: 0.596834
+Mean reliability: 0.59623
+Standard deviation of reliability: 0.00105714
+Mean elapsed time: 56.1573 seconds
+Standard deviation of elapsed time: 0.105328 seconds
+----------------------------
+Arguments: 
+ - CSV file: ./118-nodes.csv
+ - Number of samples: 372221
+ - Number of threads: 2
+ - Number of experiments: 10
+----------------------------
+ - Graph loaded successfully!
+ - Number of nodes: 118
+ - Number of edges: 125
+Thread 0 is stealing work from thread 1
+Experiment 1 - Calculated reliability: 0.595756
+Experiment 2 - Calculated reliability: 0.596713
+Thread 0 is stealing work from thread 1
+Experiment 3 - Calculated reliability: 0.595587
+Thread 1 is stealing work from thread 0
+Experiment 4 - Calculated reliability: 0.596525
+Thread 1 is stealing work from thread 0
+Experiment 5 - Calculated reliability: 0.596995
+Thread 1 is stealing work from thread 0
+Experiment 6 - Calculated reliability: 0.597242
+Thread 1 is stealing work from thread 0
+Experiment 7 - Calculated reliability: 0.595576
+Thread 1 is stealing work from thread 0
+Experiment 8 - Calculated reliability: 0.596957
+Thread 0 is stealing work from thread 1
+Experiment 9 - Calculated reliability: 0.595429
+Thread 0 is stealing work from thread 1
+Experiment 10 - Calculated reliability: 0.595036
+Mean reliability: 0.596182
+Standard deviation of reliability: 0.000746099
+Mean elapsed time: 28.2555 seconds
+Standard deviation of elapsed time: 0.0494384 seconds
+----------------------------
+Arguments: 
+ - CSV file: ./118-nodes.csv
+ - Number of samples: 372221
+ - Number of threads: 4
+ - Number of experiments: 10
+----------------------------
+ - Graph loaded successfully!
+ - Number of nodes: 118
+ - Number of edges: 125
+Thread 3 is stealing work from thread 0
+Thread 3 is stealing work from thread 1
+Experiment 1 - Calculated reliability: 0.595869
+Thread 1 is stealing work from thread 2
+Thread 0 is stealing work from thread 3
+Experiment 2 - Calculated reliability: 0.594905
+Thread 0 is stealing work from thread 1
+Thread 0 is stealing work from thread 2
+Thread 1 is stealing work from thread 3
+Experiment 3 - Calculated reliability: 0.595388
+Thread 0 is stealing work from thread 2
+Thread 1 is stealing work from thread 3
+Experiment 4 - Calculated reliability: 0.595874
+Thread 1 is stealing work from thread 0
+Thread 1 is stealing work from thread 2
+Thread 1 is stealing work from thread 3
+Experiment 5 - Calculated reliability: 0.595001
+Thread 2 is stealing work from thread 0
+Thread 2 is stealing work from thread 1
+Thread 2 is stealing work from thread 3
+Experiment 6 - Calculated reliability: 0.596895
+Thread 3 is stealing work from thread 0
+Thread 3 is stealing work from thread 1
+Thread 3 is stealing work from thread 2
+Experiment 7 - Calculated reliability: 0.596406
+Thread 1 is stealing work from thread 0
+Thread 1 is stealing work from thread 2
+Thread 1 is stealing work from thread 3
+Experiment 8 - Calculated reliability: 0.595678
+Thread 2 is stealing work from thread 0
+Thread 0 is stealing work from thread 1
+Experiment 9 - Calculated reliability: 0.595055
+Thread 3 is stealing work from thread 0
+Thread 3 is stealing work from thread 1
+Thread 3 is stealing work from thread 2
+Experiment 10 - Calculated reliability: 0.596783
+Mean reliability: 0.595786
+Standard deviation of reliability: 0.000687027
+Mean elapsed time: 14.0816 seconds
+Standard deviation of elapsed time: 0.0220349 seconds
+----------------------------
+Arguments: 
+ - CSV file: ./118-nodes.csv
+ - Number of samples: 372221
+ - Number of threads: 8
+ - Number of experiments: 10
+----------------------------
+ - Graph loaded successfully!
+ - Number of nodes: 118
+ - Number of edges: 125
+Thread 5 is stealing work from thread 0
+Thread 0 is stealing work from thread 4
+Experiment 1 - Calculated reliability: 0.594553
+Thread 6 is stealing work from thread 0
+Thread 7 is stealing work from thread 3
+Experiment 2 - Calculated reliability: 0.596672
+Thread 0 is stealing work from thread 4
+Thread 4 is stealing work from thread 6
+Experiment 3 - Calculated reliability: 0.595668
+Experiment 4 - Calculated reliability: 0.596017
+Experiment 5 - Calculated reliability: 0.594859
+Thread 7 is stealing work from thread 0
+Thread 0 is stealing work from thread 6
+Experiment 6 - Calculated reliability: 0.595313
+Experiment 7 - Calculated reliability: 0.596812
+Thread 1 is stealing work from thread 6
+Experiment 8 - Calculated reliability: 0.596138
+Experiment 9 - Calculated reliability: 0.59606
+Experiment 10 - Calculated reliability: 0.595391
+Mean reliability: 0.595748
+Standard deviation of reliability: 0.000696467
+Mean elapsed time: 7.07831 seconds
+Standard deviation of elapsed time: 0.0253218 seconds
+----------------------------
+Arguments: 
+ - CSV file: ./118-nodes.csv
+ - Number of samples: 372221
+ - Number of threads: 16
+ - Number of experiments: 10
+----------------------------
+ - Graph loaded successfully!
+ - Number of nodes: 118
+ - Number of edges: 125
+Thread 12 is stealing work from thread 3
+Thread 3 is stealing work from thread 8
+Experiment 1 - Calculated reliability: 0.596533
+Experiment 2 - Calculated reliability: 0.596404
+Thread 13 is stealing work from thread 0
+Thread 0 is stealing work from thread 2
+Thread 2 is stealing work from thread 4
+Thread 4 is stealing work from thread 5
+Thread 5 is stealing work from thread 11
+Thread 11 is stealing work from thread 12
+Experiment 3 - Calculated reliability: 0.596436
+Experiment 4 - Calculated reliability: 0.596541
+Thread 14 is stealing work from thread 0
+Thread 0 is stealing work from thread 1
+Thread 1 is stealing work from thread 2
+Experiment 5 - Calculated reliability: 0.596151
+Thread 13 is stealing work from thread 2
+Experiment 6 - Calculated reliability: 0.595638
+Thread 13 is stealing work from thread 6
+Thread 6 is stealing work from thread 7
+Experiment 7 - Calculated reliability: 0.59686
+Thread 3 is stealing work from thread 7
+Thread 7 is stealing work from thread 12
+Experiment 8 - Calculated reliability: 0.595109
+Thread 15 is stealing work from thread 1
+Thread 13 is stealing work from thread 2
+Thread 2 is stealing work from thread 3
+Thread 3 is stealing work from thread 7
+Experiment 9 - Calculated reliability: 0.596702
+Thread 6 is stealing work from thread 3
+Experiment 10 - Calculated reliability: 0.596885
+Mean reliability: 0.596326
+Standard deviation of reliability: 0.000532109
+Mean elapsed time: 3.54258 seconds
+Standard deviation of elapsed time: 0.0190086 seconds
+----------------------------
+Arguments: 
+ - CSV file: ./118-nodes.csv
+ - Number of samples: 372221
+ - Number of threads: 32
+ - Number of experiments: 10
+----------------------------
+ - Graph loaded successfully!
+ - Number of nodes: 118
+ - Number of edges: 125
+Thread 9 is stealing work from thread 8
+Experiment 1 - Calculated reliability: 0.59624
+Thread 27 is stealing work from thread 3
+Thread 26 is stealing work from thread 5
+Thread 30 is stealing work from thread 5
+Thread 16 is stealing work from thread 29
+Thread 13 is stealing work from thread 29
+Experiment 2 - Calculated reliability: 0.596753
+Thread 24 is stealing work from thread 4
+Thread 28 is stealing work from thread 7
+Thread 5 is stealing work from thread 8
+Thread 6 is stealing work from thread 9
+Thread 1 is stealing work from thread 10
+Thread 18 is stealing work from thread 17
+Thread 20 is stealing work from thread 25
+Thread 19 is stealing work from thread 26
+Experiment 3 - Calculated reliability: 0.59758
+Thread 26 is stealing work from thread 1
+Thread 23 is stealing work from thread 11
+Thread 11 is stealing work from thread 15
+Thread 7 is stealing work from thread 19
+Thread 1 is stealing work from thread 30
+Thread 22 is stealing work from thread 31
+Experiment 4 - Calculated reliability: 0.596057
+Experiment 5 - Calculated reliability: 0.596208
+Thread 22 is stealing work from thread 5
+Thread 23 is stealing work from thread 5
+Thread 17 is stealing work from thread 5
+Thread 12 is stealing work from thread 6
+Thread 15 is stealing work from thread 8
+Thread 25 is stealing work from thread 9
+Thread 10 is stealing work from thread 19
+Thread 1 is stealing work from thread 24
+Thread 5 is stealing work from thread 26
+Thread 21 is stealing work from thread 27
+Thread 11 is stealing work from thread 29
+Thread 16 is stealing work from thread 30
+Experiment 6 - Calculated reliability: 0.596189
+Experiment 7 - Calculated reliability: 0.596656
+Thread 27 is stealing work from thread 13
+Thread 25 is stealing work from thread 14
+Experiment 8 - Calculated reliability: 0.596718
+Thread 14 is stealing work from thread 17
+Thread 8 is stealing work from thread 24
+Thread 16 is stealing work from thread 29
+Experiment 9 - Calculated reliability: 0.596122
+Experiment 10 - Calculated reliability: 0.594894
+Mean reliability: 0.596342
+Standard deviation of reliability: 0.000649737
+Mean elapsed time: 1.85669 seconds
+Standard deviation of elapsed time: 0.0429505 seconds

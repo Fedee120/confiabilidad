@@ -2,7 +2,7 @@
 
 # Script for grafo.csv
 CSV_FILE="./grafo.csv"
-NUM_SAMPLES=37222024
+NUM_SAMPLES=1488881
 NUM_EXPERIMENTS=10
 
 for NUM_THREADS in 1 2 4 8 16 32
