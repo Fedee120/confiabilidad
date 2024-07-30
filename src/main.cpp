@@ -46,7 +46,10 @@ int main(int argc, char* argv[]) {
     std::cout << "Calculated reliability: " << reliability << std::endl;
 
     // Estimar confiabilidad y calcular el intervalo de confianza
-    auto [_, p_hat, variance, confidence_interval] = simulator.estimateReliabilityWithConfidenceInterval(0.95);
+    std::tuple<double, double, double, std::pair<double, double>> result = simulator.estimateReliabilityWithConfidenceInterval(0.95);
+    //double p_hat = std::get<1>(result);
+    //double variance = std::get<2>(result);
+    std::pair<double, double> confidence_interval = std::get<3>(result);
 
     std::cout << "Chebyshev confidence interval: [" << confidence_interval.first << ", " << confidence_interval.second << "]" << std::endl;
     std::cout << "Elapsed time: " << elapsed_time.count() << " seconds" << std::endl;
