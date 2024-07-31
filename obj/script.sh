@@ -13,4 +13,4 @@
 source /etc/profile.d/modules.sh
 
 cd ~/confiablidad/obj
-./script54.sh
+./scriptgrafo.sh
