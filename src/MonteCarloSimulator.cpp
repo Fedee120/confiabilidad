@@ -2,7 +2,7 @@
 #include <iostream>
 #include <chrono>
 #include <cmath>
-#include <algorithm>  // Para std::max y std::min
+#include <algorithm>
 
 MonteCarloSimulator::MonteCarloSimulator(const Graph& graph, int num_samples, int num_threads)
     : original_graph(graph), num_samples(num_samples), num_threads(num_threads), samples_processed(0) {

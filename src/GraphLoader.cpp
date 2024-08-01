@@ -3,7 +3,7 @@
 #include <sstream>
 #include <stdexcept>
 #include <iostream>
-#include <unordered_set> // Add this line
+#include <unordered_set>
 
 Graph GraphLoader::loadGraphFromCSV(const std::string& filepath) {
     Graph graph;
@@ -22,26 +22,23 @@ Graph GraphLoader::loadGraphFromCSV(const std::string& filepath) {
         int node1, node2;
         float reliability;
 
-        // Read the first node
         if (!std::getline(iss, token, ',')) {
             std::cerr << "Error reading node1 from line: " + line << std::endl;
             throw std::runtime_error("Error reading node1 from line: " + line);
         }
         node1 = std::stoi(token);
 
-        // Read the second node
         if (!std::getline(iss, token, ',')) {
             std::cerr << "Error reading node2 from line: " + line << std::endl;
             throw std::runtime_error("Error reading node2 from line: " + line);
         }
         node2 = std::stoi(token);
 
-        // Read the reliability (failure probability)
         if (!std::getline(iss, token, ',')) {
             std::cerr << "Error reading reliability from line: " + line << std::endl;
             throw std::runtime_error("Error reading reliability from line: " + line);
         }
-        reliability = std::stof(token); // This is the failure probability
+        reliability = std::stof(token);
 
         graph.add_edge(node1, node2, reliability);
         edge_count++;

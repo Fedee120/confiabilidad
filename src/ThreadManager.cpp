@@ -43,13 +43,12 @@ void ThreadManager::thread_work(int thread_id) {
         {
             std::lock_guard<std::mutex> guard(work_mutex);
             if (work_remaining[thread_id] > 0) {
-                local_work = std::min(static_cast<int>(work_remaining[thread_id]), 1000); // Procesar en lotes de 1000
+                local_work = std::min(static_cast<int>(work_remaining[thread_id]), 1000);
                 work_remaining[thread_id] -= local_work;
             } else {
-                // Work stealing: find work from other threads
                 for (int i = 0; i < num_threads; ++i) {
                     if (work_remaining[i] > 0) {
-                        local_work = std::min(static_cast<int>(work_remaining[i]), 1000); // Procesar en lotes de 1000
+                        local_work = std::min(static_cast<int>(work_remaining[i]), 1000);
                         work_remaining[i] -= local_work;
                         std::cout << "Thread " << thread_id << " is stealing work from thread " << i << std::endl;
                         break;

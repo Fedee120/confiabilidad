@@ -9,7 +9,6 @@ void test_thread_manager() {
     std::cout << "Starting Thread Manager Test" << std::endl;
     Graph g = GraphLoader::loadGraphFromCSV("data/54-nodes.csv");
 
-    // Verificar que el grafo original es conexo
     bool original_connected = g.is_connected();
     std::cout << "Original graph is_connected: " << original_connected << std::endl;
     assert(original_connected == true);
@@ -19,7 +18,6 @@ void test_thread_manager() {
     MonteCarloSimulator simulator(g, num_samples, num_threads);
     ThreadManager manager(simulator, num_threads);
 
-    // Medir tiempo de ejecución
     auto start_time = std::chrono::high_resolution_clock::now();
     
     manager.run();
@@ -31,7 +29,6 @@ void test_thread_manager() {
     double reliability = simulator.calculate_reliability();
     std::cout << "Calculated reliability: " << reliability << std::endl;
 
-    // Estimar confiabilidad y calcular el intervalo de confianza
     auto [_, p_hat, variance, confidence_interval] = simulator.estimateReliabilityWithConfidenceInterval(0.95);
 
     std::cout << "Chebyshev confidence interval: [" << confidence_interval.first << ", " << confidence_interval.second << "]" << std::endl;

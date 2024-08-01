@@ -73,5 +73,5 @@ const std::unordered_map<int, std::vector<std::pair<int, double>>>& Graph::get_a
 
 void Graph::add_edge(int node1, int node2, double probability) {
     adjacency_list[node1].emplace_back(node2, probability);
-    adjacency_list[node2].emplace_back(node1, probability); // Asegurar que se añade en ambas direcciones
+    adjacency_list[node2].emplace_back(node1, probability);
 }

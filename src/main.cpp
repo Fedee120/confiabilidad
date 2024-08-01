@@ -3,11 +3,10 @@
 #include "ThreadManager.hpp"
 #include <iostream>
 #include <chrono>
-#include <cstdlib>  // Para std::atoi
+#include <cstdlib>
 #include <vector>
-#include <cmath>  // Para std::sqrt
+#include <cmath>
 
-// Función para calcular la media
 double calculate_mean(const std::vector<double>& data) {
     double sum = 0.0;
     for (double value : data) {
@@ -16,7 +15,6 @@ double calculate_mean(const std::vector<double>& data) {
     return sum / data.size();
 }
 
-// Función para calcular la desviación estándar
 double calculate_stddev(const std::vector<double>& data, double mean) {
     double sum = 0.0;
     for (double value : data) {
@@ -41,7 +39,6 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    //print all the arguments
     std::cout << "----------------------------" << std::endl;
     std::cout << "Arguments: " << std::endl;
     std::cout << " - CSV file: " << csv_file << std::endl;
@@ -50,10 +47,8 @@ int main(int argc, char* argv[]) {
     std::cout << " - Number of experiments: " << num_experiments << std::endl;
     std::cout << "----------------------------" << std::endl;
 
-    // Cargar el grafo desde el archivo CSV
     Graph g = GraphLoader::loadGraphFromCSV(csv_file);
 
-    // Verificar que el grafo original es conexo
     if (!g.is_connected()) {
         std::cerr << " -- The graph is not connected." << std::endl;
         return 1;
@@ -63,11 +58,8 @@ int main(int argc, char* argv[]) {
     std::vector<double> elapsed_times;
 
     for (int i = 0; i < num_experiments; ++i) {
-        // Configurar el simulador y el manejador de hilos
         MonteCarloSimulator simulator(g, num_samples, num_threads);
         ThreadManager manager(simulator, num_threads);
-
-        // Medir tiempo de ejecución
         auto start_time = std::chrono::high_resolution_clock::now();
 
         manager.run();
@@ -83,11 +75,9 @@ int main(int argc, char* argv[]) {
         std::cout << "Experiment " << (i + 1) << " - Calculated reliability: " << reliability << std::endl;
     }
 
-    // Calcular media y desviación estándar de la confiabilidad
     double mean_reliability = calculate_mean(reliabilities);
     double stddev_reliability = calculate_stddev(reliabilities, mean_reliability);
 
-    // Calcular media y desviación estándar del tiempo de ejecución
     double mean_elapsed_time = calculate_mean(elapsed_times);
     double stddev_elapsed_time = calculate_stddev(elapsed_times, mean_elapsed_time);
 

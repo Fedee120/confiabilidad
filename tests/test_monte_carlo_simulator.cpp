@@ -7,7 +7,6 @@ void test_monte_carlo_simulation() {
     std::cout << "Starting Monte Carlo Simulation Test" << std::endl;
     Graph g = GraphLoader::loadGraphFromCSV("data/54-nodes.csv");
 
-    // Verificar que el grafo original es conexo
     bool original_connected = g.is_connected();
     std::cout << "Original graph is_connected: " << original_connected << std::endl;
     assert(original_connected == true);

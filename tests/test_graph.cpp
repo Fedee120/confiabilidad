@@ -7,7 +7,6 @@ void test_graph_loading() {
     std::cout << "Starting test_graph_loading" << std::endl;
     Graph g = GraphLoader::loadGraphFromCSV("data/54-nodes.csv");
 
-    // Assuming the given graph is connected initially
     bool connected = g.is_connected();
     std::cout << "Graph is_connected: " << connected << std::endl;
     assert(connected == true);
@@ -18,8 +17,7 @@ void test_graph_sampling() {
     std::cout << "Starting test_graph_sampling" << std::endl;
     Graph g = GraphLoader::loadGraphFromCSV("data/54-nodes.csv");
 
-    // Test if sampled graph is connected
-    Graph sampled_graph = g.sample_graph();
+    Graph sampled_graph = g.sample_graph(std::mt19937(42));
     bool connected = sampled_graph.is_connected();
     std::cout << "Sampled graph is_connected: " << connected << std::endl;
     assert(connected == true || connected == false);
@@ -28,12 +26,11 @@ void test_graph_sampling() {
 
 void test_graph_connectivity() {
     std::cout << "Starting test_graph_connectivity" << std::endl;
-    // Manually creating a disconnected graph for testing
     Graph disconnected_graph;
     std::unordered_map<int, std::vector<std::pair<int, double>>> adj_list;
     adj_list[1] = {{2, 1.0}};
     adj_list[2] = {{1, 1.0}};
-    adj_list[3]; // Node 3 with no edges
+    adj_list[3]; 
 
     disconnected_graph.set_adjacency_list(adj_list);
 
